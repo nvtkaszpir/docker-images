@@ -4,9 +4,8 @@ MAINTAINER kaszpir@gmail.com
 
 ENV LANG C.UTF-8
 ENV TERM xterm
-ENV DEBIAN_FRONTENTD=noninteractive
 
-RUN apt-get update && apt-get -y install --no-install-recommends \
+RUN DEBIAN_FRONTENTD=noninteractive apt-get update && apt-get -y install --no-install-recommends \
   build-essential \
   graphviz \
   git \
